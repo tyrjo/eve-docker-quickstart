@@ -9,6 +9,7 @@ Creates a Docker-based "Hello World" application for Eve.
 
 This will create two containers that mount the contents of the "app" directory as a volume so it can be edited in an
 external IDE if desired.
+
 1. "app" - The application running stand-alone, outside the Eve editor at http://localhost:3000
 1. "editor" - The application running within the Eve editor at http://localhost:3001
 
