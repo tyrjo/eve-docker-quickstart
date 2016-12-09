@@ -1,0 +1,17 @@
+# Hello World
+Add a single record to a database called "myDatabase".
+
+```eve
+
+commit @myDatabase
+	[text: "Hello World" language: "Eve"]
+```
+
+Search for any records in myDatabase that have a "text" and "language".  Assign any matches to a variable named "records" and render them to the brower.  Since there is only one search term, the variable assignment isn't necessary, but demonstrates the concept.
+
+```
+search @myDatabase
+	data = [text language]
+
+bind @browser	[#div text: "{{data.text}} is written in {{data.language}}."]
+```

@@ -1,0 +1,16 @@
+version: "2"
+services:
+    app:
+        build: .
+        ports:
+          - 3000:3000
+        volumes:
+          - ./app:/app/
+
+    editor:
+        build: .
+        ports:
+          - 3001:3001
+        volumes:
+          - ./app:/app/
+        command: eve --port 3001 ./app.eve --editor
